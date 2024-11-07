@@ -13,11 +13,10 @@ public class HeaderController {
     @GetMapping("/header")
     public String getRegionalResponse(@RequestHeader(required = false, defaultValue = "PH") String region) {
 
-        if(region.equals("PH")) return "KUPAL KA BA?";
-        if(region.equals("CN")) return "CHING CHONG BING BONG?";
+        if(region.equals("PH")) return "PHILIPPINES";
+        if(region.equals("CN")) return "CHINA";
 
         return "Are you an Alien?";
-
     }
 
     @GetMapping(value = "/header/product", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
@@ -25,7 +24,7 @@ public class HeaderController {
         Product product = new Product();
         product.setId(1);
         product.setName("Test1");
-        product.setDescription("hehehe");
+        product.setDescription("TEST");
 
         return ResponseEntity.ok(product);
     }

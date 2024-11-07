@@ -9,7 +9,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.http.ResponseEntity;
 
@@ -19,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
 
-public class GetProductServiceTest {
+class GetProductServiceTest {
 
     @Mock // needed dependency to run test
     private ProductRepository productRepository;
@@ -34,7 +33,7 @@ public class GetProductServiceTest {
     }
 
     @Test
-    public void  give_product_exists_when_get_product_serive_return_product_dto() {
+    void  give_product_exists_when_get_product_service_return_product_dto() {
         //Given
         Product product = new Product();
         product.setId(1);
@@ -53,7 +52,7 @@ public class GetProductServiceTest {
     }
 
     @Test
-    public void given_product_does_not_exists_when_get_product_service_throw_product_not_found_exception(){
+    void given_product_does_not_exists_when_get_product_service_throw_product_not_found_exception(){
 
         //Given
         when(productRepository.findById(1)).thenReturn(Optional.empty());
