@@ -1,0 +1,27 @@
+2024-11-08T10:13:51.662+08:00  INFO 19932 --- [JsbDev] [main] com.example.jsbdev.JsbDevApplication     : Starting JsbDevApplication using Java 21 with PID 19932 (D:\intelliJ_Project\JsbDev\target\classes started by john.andal in D:\intelliJ_Project\JsbDev)
+2024-11-08T10:13:51.671+08:00  INFO 19932 --- [JsbDev] [main] com.example.jsbdev.JsbDevApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-11-08T10:13:56.965+08:00  INFO 19932 --- [JsbDev] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-08T10:13:57.378+08:00  INFO 19932 --- [JsbDev] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 395 ms. Found 2 JPA repository interfaces.
+2024-11-08T10:13:58.817+08:00  INFO 19932 --- [JsbDev] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-08T10:13:58.837+08:00  INFO 19932 --- [JsbDev] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-08T10:13:58.837+08:00  INFO 19932 --- [JsbDev] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-08T10:13:58.914+08:00  INFO 19932 --- [JsbDev] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-08T10:13:58.914+08:00  INFO 19932 --- [JsbDev] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6944 ms
+2024-11-08T10:13:59.138+08:00  INFO 19932 --- [JsbDev] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-08T10:13:59.633+08:00  INFO 19932 --- [JsbDev] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@59636c47
+2024-11-08T10:13:59.636+08:00  INFO 19932 --- [JsbDev] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-08T10:13:59.690+08:00  INFO 19932 --- [JsbDev] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-08T10:13:59.778+08:00  INFO 19932 --- [JsbDev] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-08T10:13:59.843+08:00  INFO 19932 --- [JsbDev] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-08T10:14:00.371+08:00  INFO 19932 --- [JsbDev] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-08T10:14:01.654+08:00  INFO 19932 --- [JsbDev] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-08T10:14:01.657+08:00  INFO 19932 --- [JsbDev] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-08T10:14:02.140+08:00  INFO 19932 --- [JsbDev] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-08T10:14:02.682+08:00  WARN 19932 --- [JsbDev] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-08T10:14:03.155+08:00  INFO 19932 --- [JsbDev] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-08T10:14:03.164+08:00  INFO 19932 --- [JsbDev] [main] com.example.jsbdev.JsbDevApplication     : Started JsbDevApplication in 14.222 seconds (process running for 16.955)
+2024-11-08T10:14:07.484+08:00  INFO 19932 --- [JsbDev] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-08T10:14:07.485+08:00  INFO 19932 --- [JsbDev] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-08T10:14:07.488+08:00  INFO 19932 --- [JsbDev] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-11-08T10:14:07.576+08:00  INFO 19932 --- [JsbDev] [http-nio-8080-exec-2] c.e.j.p.services.GetProductService       : Executing class com.example.jsbdev.product.services.GetProductService input: 4
+2024-11-08T10:14:07.680+08:00 ERROR 19932 --- [JsbDev] [http-nio-8080-exec-2] c.e.j.e.ProductNotFoundException         : Exception class com.example.jsbdev.exceptions.ProductNotFoundException thrown
