@@ -25,3 +25,6 @@
 2024-11-08T10:14:07.488+08:00  INFO 19932 --- [JsbDev] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
 2024-11-08T10:14:07.576+08:00  INFO 19932 --- [JsbDev] [http-nio-8080-exec-2] c.e.j.p.services.GetProductService       : Executing class com.example.jsbdev.product.services.GetProductService input: 4
 2024-11-08T10:14:07.680+08:00 ERROR 19932 --- [JsbDev] [http-nio-8080-exec-2] c.e.j.e.ProductNotFoundException         : Exception class com.example.jsbdev.exceptions.ProductNotFoundException thrown
+2024-11-08T10:21:05.730+08:00  INFO 19932 --- [JsbDev] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-08T10:21:05.733+08:00  INFO 19932 --- [JsbDev] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-08T10:21:05.784+08:00  INFO 19932 --- [JsbDev] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
