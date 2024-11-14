@@ -1,5 +1,6 @@
 package com.example.jsbdev.security;
 
+import com.example.jsbdev.security.jwt.JwtAuthenticationFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -58,9 +59,8 @@ public class SecurityConfiguration {
         return  httpSecurity
                 .csrf(AbstractHttpConfigurer::disable) // Allows POST, PUT, DELETE mappings with auth
                 .authorizeHttpRequests(authorize -> {
-
+                    authorize.requestMatchers("/login").permitAll();
                     authorize.requestMatchers("/createnewuser").permitAll();
-
                     authorize.anyRequest().authenticated();
 //                    authorize.requestMatchers("/open").permitAll();
 //                    authorize.requestMatchers("/closed").authenticated();
@@ -71,11 +71,17 @@ public class SecurityConfiguration {
 
                 })
 //                .httpBasic(Customizer.withDefaults()) // basic auth
-                .addFilterBefore(
-                        new BasicAuthenticationFilter(authenticationManager(httpSecurity)),
-                        UsernamePasswordAuthenticationFilter.class
-                )
+//                .addFilterBefore(
+//                        new BasicAuthenticationFilter(authenticationManager(httpSecurity)),
+//                        UsernamePasswordAuthenticationFilter.class
+//                )
+                .addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
                 .build();
+    }
+
+    @Bean
+    public JwtAuthenticationFilter jwtAuthenticationFilter() {
+        return new JwtAuthenticationFilter();
     }
 
 }
