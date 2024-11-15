@@ -59,6 +59,7 @@ public class SecurityConfiguration {
         return  httpSecurity
                 .csrf(AbstractHttpConfigurer::disable) // Allows POST, PUT, DELETE mappings with auth
                 .authorizeHttpRequests(authorize -> {
+//                    authorize.anyRequest().permitAll(); // Actuator Testing
                     authorize.requestMatchers("/login").permitAll();
                     authorize.requestMatchers("/createnewuser").permitAll();
                     authorize.anyRequest().authenticated();
